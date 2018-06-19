@@ -1,15 +1,23 @@
-package com.example.jinsu.cash.data
+package com.example.jinsu.cash.network
 
 import com.example.jinsu.cash.model.User
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface RetroService {
-    @GET("/users/{KEY}")
-    fun getRespos(@Path("KEY") id: String): Call<User>
+    @GET("/findId/")
+    fun onLogin(@Query("id") id: String): Call<User>
+
+    @FormUrlEncoded
+    @POST("/controller/join/")
+    fun postUser(@Field("id") id : String, @Field("pw") pw : String, @Field("nickname") nickname : String,
+                 @Field("uuid") uuid : String, @Field("profile_img") profile_img : String, @Field("id_group") id_group : Int) : Call<User>
+
+    @GET("/user/checkId")
+    fun checkId(@Query("id") id : String ): Call<String>
+
+    @GET("/user/checkNick")
+    fun checkNick(@Query("nickname") nickname : String ): Call<String>
 
     /*@GET("/All_Gift")
     abstract fun getGift(): Call<ArrayList<Gift>>

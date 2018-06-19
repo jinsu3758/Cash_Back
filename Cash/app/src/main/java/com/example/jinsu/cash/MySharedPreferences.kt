@@ -7,6 +7,7 @@ import com.google.gson.Gson
 
 class MySharedPreferences (context : Context)
 {
+
     val PREFS_FILENAME = "prefs"
     val PREF_KEY_MY_EDITTEXT = "user_data"
     var gson : Gson = Gson()

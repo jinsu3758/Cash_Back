@@ -1,35 +1,56 @@
 package com.example.jinsu.cash
 
 import android.util.Log
-import com.example.jinsu.cash.data.RetroClient
-import com.example.jinsu.cash.data.RetroService
+import com.example.jinsu.cash.common.Constant
 import com.example.jinsu.cash.model.User
+import com.example.jinsu.cash.network.RetroService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 
-class Repository {
-    private lateinit var retroService : RetroService
-    private lateinit var retroClient : RetroClient<RetroService>
+object Repository {
 
-    fun Connect() {
-        retroClient = RetroClient()
-        retroService = retroClient.getClient(RetroService::class.java)
+    var retroService: RetroService? = null
+    get() {getClient()
+        return field}
+
+
+    interface NetworkCallback
+    {
+        fun setUser()
     }
 
-    fun upLoadUser(user : User)
-    {
-        Connect()
-        var call : Call<String> = retroService.setUser(user)
+   /* fun getBASE_URL(): String {
+        return BASE_URL
+    }*/
 
-        call.enqueue(object : Callback<String>
+    fun getClient() {
+        val retrofit = Retrofit.Builder()
+                .baseUrl(Constant.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .build()
+        retroService = retrofit.create(RetroService::class.java)
+    }
+
+    fun setUser(id : String,  pw : String, nickname : String,
+                 uuid : String,  profile_img : String,  id_group : Int)
+    {
+        getClient()
+        var call : Call<User> = retroService!!.postUser(id,pw,nickname,uuid,profile_img,id_group)
+
+        call.enqueue(object : Callback<User>
         {
-            override fun onResponse(call: Call<String>, response: Response<String>) {
-                Log.e("main_repo","유저 데이터 전송 성공")
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                Log.e("main_repo","유저 데이터 전송 성공 : " )
+
             }
 
-            override fun onFailure(call: Call<String>, t: Throwable) {
-                Log.e("main_repo","유저 데이터 전송 실패")
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Log.e("main_repo","유저 데이터 전송 실패 " + t.message )
             }
         })
 

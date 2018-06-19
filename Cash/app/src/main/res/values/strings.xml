@@ -2,10 +2,52 @@
     <string name="app_name">캐시싯</string>
     <string name="nickname">닉네임</string>
     <string name="id">아이디</string>
-    <string name="pw">비밀번호</string>
+    <string name="pw">* * * * * *</string>
+    <string name="pw2">비밀번호</string>
     <string name="pw_check">비밀번호 확인</string>
+    <string name="pw_look">비밀번호 보기</string>
+    <string name="agree">동의</string>
+    <string name="share">SHARE</string>
+    <string name="badge">프로필 뱃지</string>
     <string name="check">확인</string>
+    <string name="complete">완료</string>
     <string name="cancel">취소</string>
     <string name="overlap_check">중복 확인</string>
-    <string name="login">로그인</string>
+    <string name="login">SIGN IN</string>
+    <string name="sign">REGISTER</string>
+    <string name="username">USERNAME</string>
+    <string name="mypage">마이 페이지</string>
+    <string name="forget_pw">Forget your password? Reset Here.</string>
+    <string name="default_set">바른자세 설정</string>
+    <string name="profile">프로필 설정</string>
+    <string name="point_list">포인트 내역</string>
+    <string name="setting">환경설정</string>
+    <string name="logout">로그아웃</string>
+    <string name="main">메인 페이지</string>
+    <string name="total_time">총 앉은 시간</string>
+    <string name="good_time">바른자세 시간</string>
+    <string name="bad_time">나쁜자세 시간</string>
+    <string name="rank">랭킹</string>
+    <string name="shopping">쇼핑</string>
+    <string name="statics">통계</string>
+
+    <string name="user_term">고객님의 권리 및 의무를 이해하기 위하여 애플리케이션 소프트웨어 이용약관(이하 "본 약관")을 주의 깊게 읽어주시길 바랍니다.
+
+본 약관은 고객님과 SONY INTERACTIVE ENTERTAINMENT INC.(이하 "SIE Inc") 간에 체결됩니다. SIE Inc에 의하여 장치(아래에서 정의함)에 사용하는 것을 목적으로 제공되는 애플리케이션 소프트웨어(이하 “애플리케이션 소프트웨어”)에 접속하거나 해당 애플리케이션 소프트웨어를 사용하는 것은 본 약관의 조건에 대한 고객님의 수용을 명확하게 나타내는 것입니다.
+        애플리케이션 소프트웨어를 사용함으로써, 고객님은 고객님의 관할권의 법규 하에서 계약을 체결할 능력이 있으며 본 약관의 조건에 동의한다는 것을 나타냅니다.
+고객님은 본 약관을 (i) SIE Inc가 상업적으로 다음과 같은 장치에 사용 가능하도록 만든 애플리케이션 소프트웨어 (예를 들어 Steam, PC; iTunes 스토어, iOS 장치; Google Play 스토어, Android 장치)(이하 “장치”)에 접속하거나 이
+용 ; 또는 (ii) 애플리케이션 소프트웨어를 이용하여 고객님의 Sony Entertainment Network 계정에 접속하거나 이용하는 고객님 및 다른 사용자들을 대표하여 동의하는 것입니다.
+        고객님은 다른 사용자들의 애플리케이션 소프트웨어의 이용 및 본 약관의 준수에 대하여 책임을 집니다.
+SIE Inc는 때때로 고객님에게 통지하거나 혹은 통지 없이 본 약관의 조건을 변경할 권리를 가집니다. 본 약관의 가장 최신 버전이 모든 기존 버전에 우선합니다.
+본 약관은 애플리케이션 소프트웨어 및 해당 애플리케이션의 모든 패치, 업데이트, 업그레이드 또는 새로운 버전에 적용됩니다.
+주의: 만약 고객님이 미국 거주자 또는 북, 중남미 국가의 거주자라면, 법률이 허용하는 최대한의 범위 내에서, 본 약관은 본 약관 하에서 그리고 고객님과 "SONY 법인"(제9조에 정의) 간의 모든 "분쟁"(제9조에 정의)에 있어서 고객님의 권리에 영향을 주는 제9조에 명시된 개인 중재 의무 및 집단 소송 권리 포기 조항을 포함합니다. 고객님은 제9조에서 명시된 중재 의무 및 집단 소송 포기 조항을 회피할 수 있는 권리를 가집니다.</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
 </resources>
