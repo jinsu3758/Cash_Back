@@ -30,6 +30,14 @@
     <string name="rank">랭킹</string>
     <string name="shopping">쇼핑</string>
     <string name="statics">통계</string>
+    <string name="sit_right">바른자세</string>
+    <string name="sit_twist">꼰자세</string>
+    <string name="sit_bow">숙인자세</string>
+    <string name="sit_lean">기댄자세</string>
+    <string name="sit_etc">기타</string>
+    <string name="left">&lt;</string>
+    <string name="right">&gt;</string>
+
 
     <string name="user_term">고객님의 권리 및 의무를 이해하기 위하여 애플리케이션 소프트웨어 이용약관(이하 "본 약관")을 주의 깊게 읽어주시길 바랍니다.
 

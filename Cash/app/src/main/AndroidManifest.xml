@@ -29,6 +29,7 @@
             android:theme="@style/AppTheme"
             android:launchMode="singleTask">
 
+
         </activity>
         <activity android:name=".activity.SignInActivity">
         </activity>

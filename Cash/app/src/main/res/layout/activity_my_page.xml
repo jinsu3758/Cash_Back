@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/chart_layout"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_login"
+    android:id="@+id/mypage_layout"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    >
-    <include  android:id="@+id/content_chart" layout="@layout/content_chart"/>
+    android:orientation="vertical">
 
-    <!--<android.support.design.widget.NavigationView
+   <include android:id="@+id/mypage_content" layout="@layout/content_my_page"/>
+    <android.support.design.widget.NavigationView
         android:theme="@style/NaviTheme"
-        android:id="@+id/chart_navi"
+        android:id="@+id/mypage_navi"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
@@ -22,13 +22,6 @@
         app:headerLayout="@layout/navi_header"
         app:itemTextColor="@color/black"
         app:itemIconTint="@color/black"
-        app:menu="@menu/navi_menu" />-->
-
-    <!--<com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart"
-        android:layout_width="match_parent"
-        android:layout_height="500dp">
-
-    </com.github.mikephil.charting.charts.LineChart>-->
+        app:menu="@menu/navi_menu" />
 
 </android.support.v4.widget.DrawerLayout>

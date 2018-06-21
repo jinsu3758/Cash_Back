@@ -1,14 +1,13 @@
 package com.example.jinsu.cash.activity
 
-import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.jinsu.cash.R
-import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import kotlinx.android.synthetic.main.activity_chart.*
+
+
 
 
 class ChartActivity :  AppCompatActivity() {
@@ -26,27 +25,48 @@ class ChartActivity :  AppCompatActivity() {
 
     fun init()
     {
-        chart_entries = ArrayList<Entry>()
-        chart_entries.add(Entry(4f,0f))
-        chart_entries.add(Entry(5f,1f))
-        chart_entries.add(Entry(6f,2f))
+        
+        /*chart_entries = ArrayList<Entry>()
+        chart_entries.add(Entry(1f,0f))
+        chart_entries.add(Entry(2f,3f))
+        chart_entries.add(Entry(3f,5f))
+        chart_entries.add(Entry(4f,2f))
 
 
 
-        chart_dataset = LineDataSet(chart_entries,"# of Calls")
+        chart_dataset = LineDataSet(chart_entries,"바른 자세")
         chart_dataset.setColor(Color.RED)
         chart_dataset.setCircleColor(Color.RED)
-        chart_dataset.lineWidth = 2f
+        chart_dataset.lineWidth = 1f
         chart_dataset.circleRadius = 6f
 
 
+        val quarters = arrayOf("월", "화", "수", "목")
+
+        val formatter = object : IAxisValueFormatter {
+
+            // we don't draw numbers, so no decimal digits needed
+            val decimalDigits: Int
+                get() = 0
+
+            override fun getFormattedValue(value: Float, axis: AxisBase): String {
+                return quarters[value.toInt()-1]
+            }
+        }
+
         val xAxis = chart.getXAxis()
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM)
+        xAxis.granularity = 1f
+        xAxis.setValueFormatter(formatter)
+        xAxis.setDrawLabels(true)
+        xAxis.setDrawGridLines(false)
         xAxis.setTextColor(Color.BLACK)
-        xAxis.enableGridDashedLine(8f, 24f, 0f)
+
 
         val yLAxis = chart.getAxisLeft()
         yLAxis.setTextColor(Color.BLACK)
+        yLAxis.granularity = 5f
+        yLAxis.setDrawGridLines(false)
 
         val yRAxis = chart.getAxisRight()
         yRAxis.setDrawLabels(false)
@@ -77,7 +97,7 @@ class ChartActivity :  AppCompatActivity() {
 
         chart.setBackgroundColor(resources.getColor(R.color.white))
         chart.animateY(5000)
-        chart.invalidate()
+        chart.invalidate()*/
 
     }
 }
