@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:clipToPadding="false"
+    android:background="@color/white"
     >
 
     <android.support.v7.widget.Toolbar
@@ -25,21 +27,37 @@
         android:layout_weight="1"
         android:layout_margin="5dp"
         android:background="@drawable/border_main_layout"
-        android:elevation="10dp"
+        android:elevation="20dp"
         android:gravity="center"
         >
-        <com.github.mikephil.charting.charts.PieChart
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="10dp"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="230dp"
             >
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart_day_pie"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                >
 
-        </com.github.mikephil.charting.charts.PieChart>
+            </com.github.mikephil.charting.charts.PieChart>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:visibility="invisible"
+                >
+            </com.github.mikephil.charting.charts.LineChart>
 
+
+        </FrameLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
+            android:layout_marginBottom="7dp"
             >
             <View
                 android:id="@+id/view1"
@@ -81,7 +99,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
+            android:layout_marginBottom="7dp"
             >
             <View
                 android:id="@+id/view2"
@@ -109,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
-                android:text="3시간 16분"
+                android:text="1시간 11분"
                 android:textColor="@color/black"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="43dp"
@@ -120,7 +138,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
+            android:layout_marginBottom="7dp"
             >
             <View
                 android:id="@+id/view3"
@@ -149,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
-                android:text="3시간 16분"
+                android:text="1시간 35분"
                 android:textColor="@color/black"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="43dp"
@@ -160,7 +178,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
+            android:layout_marginBottom="7dp"
             >
             <View
                 android:id="@+id/view4"
@@ -189,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
-                android:text="3시간 16분"
+                android:text="0시간 57분"
                 android:textColor="@color/black"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="43dp"
@@ -200,7 +218,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
             >
             <View
                 android:id="@+id/view5"
@@ -228,7 +245,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
-                android:text="3시간 16분"
+                android:text="2시간 25분"
                 android:textColor="@color/black"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="43dp"
@@ -238,14 +255,14 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="2dp"
             android:elevation="13dp"
             android:background="@color/gray4"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="13dp"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             />
-        
+
         <RelativeLayout
             android:layout_marginTop="9dp"
             android:layout_width="121dp"
@@ -284,11 +301,43 @@
 
 
         </RelativeLayout>
-        
-        <LinearLayout
-            android:layout_width="260dp"
-            android:layout_height="25dp">
 
+        <LinearLayout
+            android:layout_marginTop="11dp"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/chart_btn_day"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="@string/daily"
+                android:background="@drawable/border_btn_left_round_pressed"
+                />
+            <Button
+                android:id="@+id/chart_btn_week"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="@string/weekly"
+                android:background="@drawable/select_btn_center"
+                />
+            <Button
+                android:id="@+id/chart_btn_month"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="@string/monthly"
+                android:background="@drawable/select_btn_right"
+                />
         </LinearLayout>
 
     </LinearLayout>
@@ -297,8 +346,33 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.175"
-        android:layout_margin="5dp"
-        android:elevation="10dp">
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/border_main_layout"
+        android:elevation="20dp"
+        android:orientation="vertical"
+        android:baselineAligned="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/comment"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/comment2"
+            />
 
     </LinearLayout>
 

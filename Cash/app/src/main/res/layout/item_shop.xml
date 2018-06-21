@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shop_layout_item"
+    android:layout_width="164.3dp"
+    android:layout_margin="8dp"
+    android:layout_height="203.3dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/shop_im_item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="7dp"
+        android:layout_weight="6"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        >
+
+        <ImageView
+            android:id="@+id/shop_im_dot"
+            android:layout_width="10.3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="10.3dp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="top"/>
+
+        <LinearLayout
+            android:id="@+id/shop_layout_txt1"
+            android:layout_marginLeft="7.7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@id/shop_im_dot"
+            android:layout_toRightOf="@id/shop_im_dot"
+            android:orientation="vertical"
+            android:baselineAligned="true"
+            >
+
+            <TextView
+                android:id="@+id/shop_txt_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13.7sp"
+                android:textStyle="bold"
+                android:text="스타벅스"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/shop_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="아메리카노"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shop_txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="2000p"
+            android:layout_marginRight="11.3dp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

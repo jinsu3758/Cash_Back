@@ -70,13 +70,13 @@ class LoginActivity : AppCompatActivity(),LoginContract.VIew,BluetoothCallback {
             startActivity(Intent(this,SignInActivity::class.java))
         }
 
-        login_btn_blue.setOnClickListener()
+        /*login_btn_blue.setOnClickListener()
         {
             if(BluetoothService.get.deviceState)
             {
                 BluetoothService.get.enableBluetooth();
             }
-        }
+        }*/
 
     }
 

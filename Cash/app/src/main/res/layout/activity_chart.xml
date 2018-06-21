@@ -12,7 +12,7 @@
     >
     <include  android:id="@+id/content_chart" layout="@layout/content_chart"/>
 
-    <!--<android.support.design.widget.NavigationView
+    <android.support.design.widget.NavigationView
         android:theme="@style/NaviTheme"
         android:id="@+id/chart_navi"
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
         app:headerLayout="@layout/navi_header"
         app:itemTextColor="@color/black"
         app:itemIconTint="@color/black"
-        app:menu="@menu/navi_menu" />-->
+        app:menu="@menu/navi_menu" />
 
     <!--<com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"

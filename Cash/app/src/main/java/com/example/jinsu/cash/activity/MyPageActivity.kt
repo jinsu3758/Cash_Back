@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
+import com.bumptech.glide.request.RequestOptions
 import com.example.jinsu.cash.R
 import com.example.jinsu.cash.common.Constant
 import kotlinx.android.synthetic.main.activity_my_page.*
@@ -45,6 +46,12 @@ class MyPageActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         mypage_layout.addDrawerListener(toggle)
         toggle.syncState()
         mypage_navi.setNavigationItemSelectedListener(this)
+        Glide.with(this).load(R.drawable.my)
+                .apply(RequestOptions().circleCrop())
+                .into(mypage_navi.getHeaderView(0).navi_im_profile)
+        Glide.with(this).load(R.drawable.my)
+                .apply(RequestOptions().circleCrop())
+                .into(mypage_content.mypage_im_profile)
         if(Constant.prefs.user_data != null)
         {
             val user = Constant.prefs.user_data
@@ -67,6 +74,14 @@ class MyPageActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             R.id.menu_nav_mypage ->
             {
 
+            }
+            R.id.menu_nav_chart ->
+            {
+                startActivity(Intent(this,ChartActivity::class.java))
+            }
+            R.id.menu_nav_shopping ->
+            {
+                startActivity(Intent(this,ShopActivity::class.java))
             }
         }
         mypage_layout.closeDrawer(GravityCompat.START)

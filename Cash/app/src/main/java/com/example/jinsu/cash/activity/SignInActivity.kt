@@ -135,14 +135,6 @@ class SignInActivity : AppCompatActivity(),SignInContract.VIew {
             //스크롤뷰가 텍스트뷰의 터치이벤트를 가져가지 못하게 함
             false
         })*/
-        sign_btn_profile.setOnClickListener()
-        {
-            val intent = Intent(Intent.ACTION_PICK)
-            intent.type = MediaStore.Images.Media.CONTENT_TYPE
-            intent.data = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-            startActivityForResult(intent, Constant.REQUEST_IMAGE)
-        }
-
         sign_im_profile.setOnClickListener()
         {
             val intent = Intent(Intent.ACTION_PICK)
@@ -151,6 +143,10 @@ class SignInActivity : AppCompatActivity(),SignInContract.VIew {
             startActivityForResult(intent, Constant.REQUEST_IMAGE)
         }
 
+        sign_btn_default.setOnClickListener()
+        {
+            startActivity(Intent(this,DefaultActivity::class.java))
+        }
 
         //아이디 중복확인 버튼
         sign_btn_overlapId.setOnClickListener()

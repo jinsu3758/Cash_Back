@@ -116,20 +116,7 @@
                 android:text="@string/forget_pw"
                 android:layout_marginTop="30dp"
                 />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:gravity="center"
-                android:layout_marginTop="33dp"
-                >
-                <Button
-                    android:id="@+id/login_btn_blue"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:background="@drawable/border_btn_round"
-                    android:text="블루투스"/>
 
-            </LinearLayout>
 
 
         </LinearLayout>

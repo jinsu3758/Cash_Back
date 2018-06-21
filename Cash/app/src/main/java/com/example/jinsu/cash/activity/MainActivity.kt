@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MenuItem
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.jinsu.cash.R
 import com.example.jinsu.cash.common.Constant
 import com.example.jinsu.cash.util.CircleAnimation
@@ -56,7 +58,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         main_layout.addDrawerListener(toggle)
         toggle.syncState()
         main_navi.setNavigationItemSelectedListener(this)
-
+        Glide.with(this).load(R.drawable.my).apply(RequestOptions().circleCrop())
+                .into(main_navi.getHeaderView(0).navi_im_profile)
         if(Constant.prefs.user_data != null)
         {
             val user = Constant.prefs.user_data
@@ -86,6 +89,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.menu_nav_mypage ->
             {
                 startActivity(Intent(this,MyPageActivity::class.java))
+            }
+            R.id.menu_nav_chart ->
+            {
+                startActivity(Intent(this,ChartActivity::class.java))
+            }
+            R.id.menu_nav_shopping ->
+            {
+                startActivity(Intent(this,ShopActivity::class.java))
             }
         }
         main_layout.closeDrawer(GravityCompat.START)

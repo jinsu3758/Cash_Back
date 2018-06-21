@@ -31,17 +31,17 @@ class LoginPresenter : LoginContract.Presenter {
 
     override fun onLogin(id: String, pw : String) {
 
-       /* if(id.length < 3)
+        if(id.length == 0)
         {
             view.setDialog("아이디를 다시 입력해주세요.",Constant.DIALOG_COMMON)
             return
         }
 
-        if(pw.length < 3 )
+        if(pw.length == 0 )
         {
             view.setDialog("비밀번호를 다시 입력해주세요.",Constant.DIALOG_COMMON)
             return
-        }*/
+        }
 
         val retrofit = Retrofit.Builder()
                 .baseUrl(Constant.BASE_URL)
@@ -80,7 +80,7 @@ class LoginPresenter : LoginContract.Presenter {
                 // No explanation needed, we can request the permission.
                 ActivityCompat.requestPermissions(view as Activity,
                         arrayOf<String>(Manifest.permission.READ_PHONE_STATE,Manifest.permission.BLUETOOTH
-                        ,Manifest.permission.BLUETOOTH_ADMIN),
+                        ,Manifest.permission.BLUETOOTH_ADMIN, Manifest.permission.ACCESS_FINE_LOCATION),
                         Constant.MY_PERMISSIONS_REQUEST_READ_CONTACTS)
 
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
