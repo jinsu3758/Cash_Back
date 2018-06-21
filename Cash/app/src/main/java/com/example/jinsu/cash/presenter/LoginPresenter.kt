@@ -7,34 +7,56 @@ import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.util.Log
-import com.example.jinsu.cash.Repository
 import com.example.jinsu.cash.common.Constant
 import com.example.jinsu.cash.contract.LoginContract
 import com.example.jinsu.cash.model.User
+import com.example.jinsu.cash.network.RetroService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class LoginPresenter : LoginContract.Presenter {
 
     lateinit override var view: LoginContract.VIew
 
     override fun autoLogin() {
-        var my_user : User?
         if(Constant.prefs.user_data != null)
         {
             Log.d("my_login","자동 로그인 성공")
-            my_user = Constant.prefs.user_data
             view.start()
         }
     }
 
     override fun onLogin(id: String, pw : String) {
-        var call : retrofit2.Call<User> = Repository.retroService!!.onLogin(id)
+
+       /* if(id.length < 3)
+        {
+            view.setDialog("아이디를 다시 입력해주세요.",Constant.DIALOG_COMMON)
+            return
+        }
+
+        if(pw.length < 3 )
+        {
+            view.setDialog("비밀번호를 다시 입력해주세요.",Constant.DIALOG_COMMON)
+            return
+        }*/
+
+        val retrofit = Retrofit.Builder()
+                .baseUrl(Constant.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        val retroService = retrofit.create(RetroService::class.java)
+        var call : retrofit2.Call<User> = retroService.onLogin(id)
         call.enqueue(object : Callback<User>
         {
             override fun onResponse(call: Call<User>, response: Response<User>) {
-                Log.e("main_repo","로그인 전송 성공 : " )
+                if(response.body() == null) {
+                    Log.e("main_repo","로그인 전송 null : " )
+                }
+
+                Log.e("main_repo","로그인 전송 성공 : " + response.body()!!.nickname )
                 Constant.prefs.user_data = response.body()
                 view.start()
             }
@@ -57,7 +79,8 @@ class LoginPresenter : LoginContract.Presenter {
             } else {
                 // No explanation needed, we can request the permission.
                 ActivityCompat.requestPermissions(view as Activity,
-                        arrayOf<String>(Manifest.permission.READ_PHONE_STATE,Manifest.permission.BLUETOOTH),
+                        arrayOf<String>(Manifest.permission.READ_PHONE_STATE,Manifest.permission.BLUETOOTH
+                        ,Manifest.permission.BLUETOOTH_ADMIN),
                         Constant.MY_PERMISSIONS_REQUEST_READ_CONTACTS)
 
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an

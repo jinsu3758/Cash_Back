@@ -5,7 +5,8 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface RetroService {
-    @GET("/findId/")
+
+    @GET("/controller/findId/")
     fun onLogin(@Query("id") id: String): Call<User>
 
     @FormUrlEncoded
@@ -13,10 +14,10 @@ interface RetroService {
     fun postUser(@Field("id") id : String, @Field("pw") pw : String, @Field("nickname") nickname : String,
                  @Field("uuid") uuid : String, @Field("profile_img") profile_img : String, @Field("id_group") id_group : Int) : Call<User>
 
-    @GET("/user/checkId")
+    @GET("/controller/checkId")
     fun checkId(@Query("id") id : String ): Call<String>
 
-    @GET("/user/checkNick")
+    @GET("/controller/checkNick")
     fun checkNick(@Query("nickname") nickname : String ): Call<String>
 
     /*@GET("/All_Gift")

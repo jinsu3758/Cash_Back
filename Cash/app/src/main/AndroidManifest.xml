@@ -22,11 +22,7 @@
         <activity android:name=".activity.LoginActivity"
             android:theme="@style/MainTheme_White"
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".activity.MainActivity"
@@ -42,6 +38,14 @@
         <activity android:name=".activity.MyPageActivity"
             android:theme="@style/AppTheme">
 
+        </activity>
+
+        <activity android:name=".activity.ChartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <service android:name=".util.SitService"
             android:exported="true"></service>

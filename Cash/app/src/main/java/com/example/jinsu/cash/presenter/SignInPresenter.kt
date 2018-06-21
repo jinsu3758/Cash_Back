@@ -3,7 +3,6 @@ package com.example.jinsu.cash.presenter
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
-import android.os.AsyncTask
 import android.provider.Settings
 import android.telephony.TelephonyManager
 import android.util.Log
@@ -44,9 +43,9 @@ class SignInPresenter : SignInContract.Presenter
 
         if(pw.equals(pw_check))
         {
-            /*if(!id.matches("^[a-zA-Z0-9]{4,15}$".toRegex()))
+            /*if(!id.matches("^[a-zA-Z0-9]{3,15}$".toRegex()))
             {
-                view.setDialog("아이디 형식이 틀립니다.\n5~15글자의 영어 및 숫자만 가능합니다.",Constant.DIALOG_COMMON)
+                view.setDialog("아이디 형식이 틀립니다.\n3~15글자의 영어 및 숫자만 가능합니다.",Constant.DIALOG_COMMON)
                 view.clearEditText()
                 return
             }
@@ -130,9 +129,9 @@ class SignInPresenter : SignInContract.Presenter
     }
 
     override fun checkId(id: String) {
-        if(!id.matches("^[a-zA-Z0-9]{4,15}$".toRegex()))
+        if(!id.matches("^[a-zA-Z0-9]{3,15}$".toRegex()))
         {
-            view.setDialog("아이디 형식이 틀립니다.\n5~15글자의 영어 및 숫자만 가능합니다.",Constant.DIALOG_COMMON)
+            view.setDialog("아이디 형식이 틀립니다.\n3~15글자의 영어 및 숫자만 가능합니다.",Constant.DIALOG_COMMON)
             view.clearEditText()
             return
         }
@@ -170,7 +169,7 @@ class SignInPresenter : SignInContract.Presenter
         {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 Log.e("main_repo","닉네임 체크  성공 : " )
-                val bool = response.body()
+                val bool = response.body().toString()
                 if(bool!!.equals("true"))
                 {
                     view.setDialog("사용 가능합니다.",Constant.DIALOG_OVER_NOT_NICK)

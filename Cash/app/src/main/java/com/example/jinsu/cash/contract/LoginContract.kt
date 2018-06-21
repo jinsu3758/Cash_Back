@@ -5,6 +5,7 @@ interface LoginContract {
     interface VIew
     {
         fun start()
+        fun setDialog(message : String, type : Int)
     }
 
     //Rresenter의 메서드를 정의

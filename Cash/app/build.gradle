@@ -47,5 +47,8 @@ dependencies {
         transitive = true
     }
 
+    //graph
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
 
 }

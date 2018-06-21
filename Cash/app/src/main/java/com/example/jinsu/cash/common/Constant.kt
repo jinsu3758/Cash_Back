@@ -19,6 +19,6 @@ object Constant {
 
 
     lateinit var prefs : MySharedPreferences
-    val BASE_URL = "http://13.209.77.171:8080/"
+    val BASE_URL = "http://13.209.89.230:8080/"
 
 }
