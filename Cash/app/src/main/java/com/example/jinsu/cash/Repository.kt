@@ -26,6 +26,7 @@ object Repository {
         return BASE_URL
     }*/
 
+
     fun getClient() {
         val retrofit = Retrofit.Builder()
                 .baseUrl(Constant.BASE_URL)

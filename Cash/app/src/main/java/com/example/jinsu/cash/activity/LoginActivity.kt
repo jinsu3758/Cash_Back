@@ -58,12 +58,13 @@ class LoginActivity : AppCompatActivity(),LoginContract.VIew,BluetoothCallback {
         glide = Glide.with(this)
         glide.load(R.drawable.logo).into(login_im_logo)
 
-
-
         presenter.permissionCheck()
         login_btn_login.setOnClickListener()
         {
-            presenter.onLogin(login_edit_id.text.toString(), login_edit_pw.text.toString())
+//            presenter.onLogin(login_edit_id.text.toString(), login_edit_pw.text.toString())
+
+            startActivity(Intent(this,MainActivity::class.java))
+
         }
         login_btn_sign.setOnClickListener()
         {
@@ -131,6 +132,8 @@ class LoginActivity : AppCompatActivity(),LoginContract.VIew,BluetoothCallback {
     val receiver = object :BroadcastReceiver()
     {
         override fun onReceive(contxt: Context?, intent: Intent?) {
+
+
 
         }
     }

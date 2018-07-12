@@ -30,13 +30,13 @@ class MyPageActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     fun init()
     {
-
         glide.load(R.drawable.profile).into(mypage_content.mypage_im_profile)
 //        glide.load(R.drawable.tro1).apply(options).into(mypage_im_award)
         glide.load(R.drawable.account).into(mypage_content.im_my)
         glide.load(R.drawable.gift).into(mypage_content.im_point)
         glide.load(R.drawable.setting).into(mypage_content.im_setting)
         glide.load(R.drawable.logout).into(mypage_content.im_logout)
+
         mypage_content.mypage_toolbar.setNavigationIcon(getDrawable(R.drawable.menu))
         mypage_content.mypage_toolbar.title = getString(R.string.mypage)
         mypage_content.mypage_toolbar.setTitleTextColor(resources.getColor(R.color.white))
@@ -46,6 +46,7 @@ class MyPageActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         mypage_layout.addDrawerListener(toggle)
         toggle.syncState()
         mypage_navi.setNavigationItemSelectedListener(this)
+
         Glide.with(this).load(R.drawable.my)
                 .apply(RequestOptions().circleCrop())
                 .into(mypage_navi.getHeaderView(0).navi_im_profile)

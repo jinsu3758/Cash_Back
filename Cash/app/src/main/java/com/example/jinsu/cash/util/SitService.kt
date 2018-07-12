@@ -25,8 +25,6 @@ class SitService : Service() {
         val myFilteredResponse = Intent("make.a.yong.sit")
         myFilteredResponse.putExtra("stepService", "gogo")
         sendBroadcast(myFilteredResponse)
-
-
     } // end of onCreate
 
 
