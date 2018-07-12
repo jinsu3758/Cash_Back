@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#27c79d</color>
+    <color name="colorPrimary2">#1f9f7d</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white2">#fafafa</color>
+
+    <color name="black">#000000</color>
+    <color name="black2">#444444</color>
+    <color name="black3">#57000000</color>
+    <color name="black4">#71000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="gray1">#979797</color>
+    <color name="gray2">#f6f6f6</color>
+    <color name="gray3">#757575</color>
+    <color name="gray4">#999999</color>
+    <color name="gray5">#09000000</color>
+    <color name="gray6">#05000000</color>
+    <color name="gray7">#23000000</color>
+    <color name="gray8">#1a4f4f4f</color>
+
+    <color name="border">#09000000</color>
+    <color name="mint1">#50e3c2</color>
+
+    <color name="yellow1">#43f5f6b5</color>
+    <color name="yellow2">#ffc172</color>
+
+    <color name="green">#47207747</color>
+
+    <color name="blue">#84c0e8</color>
+    <color name="blue2">#26a8ec</color>
+
+    <color name="skyblue">#b5d9e9</color>
+
+    <color name="violet">#705eb0</color>
+    <color name="violet2">#a360fe</color>
+
+    <color name="orange">#febb65</color>
+    <color name="red">#cd001f</color>
+
+
+</resources>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:background="@color/white"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/chart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/colorPrimary"
+        >
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_main_layout"
+        android:elevation="20dp"
+        android:gravity="center"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="230dp"
+            >
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart_day_pie"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                >
+
+            </com.github.mikephil.charting.charts.PieChart>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:visibility="invisible"
+                >
+            </com.github.mikephil.charting.charts.LineChart>
+
+
+        </FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            >
+            <View
+                android:id="@+id/view1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="40dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="@string/sit_right"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/view1"
+                android:layout_alignTop="@id/view1"
+                android:layout_marginBottom="3dp"
+
+                />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/chart_day_sit_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="3시간 16분"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="43dp"
+                android:layout_marginBottom="3dp"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            >
+            <View
+                android:id="@+id/view2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/blue2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="40dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="@string/sit_twist"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/view2"
+                android:layout_alignBaseline="@id/view2"
+                android:layout_marginBottom="3dp"
+                />
+
+            <TextView
+                android:id="@+id/chart_day_sit_twist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="1시간 11분"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="43dp"
+                android:layout_marginBottom="3dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            >
+            <View
+                android:id="@+id/view3"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/violet"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="40dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="@string/sit_bow"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/view3"
+                android:layout_alignBaseline="@id/view3"
+                android:layout_marginBottom="3dp"
+                />
+
+            <TextView
+                android:id="@+id/chart_day_sit_bow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="1시간 35분"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="43dp"
+                android:layout_marginBottom="3dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            >
+            <View
+                android:id="@+id/view4"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/violet2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="40dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="@string/sit_lean"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/view4"
+                android:layout_alignBaseline="@id/view4"
+                android:layout_marginBottom="3dp"
+                />
+
+            <TextView
+                android:id="@+id/chart_day_sit_lean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="0시간 57분"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="43dp"
+                android:layout_marginBottom="3dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <View
+                android:id="@+id/view5"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/skyblue"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="40dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="@string/sit_etc"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/view5"
+                android:layout_alignBaseline="@id/view5"
+                android:layout_marginBottom="3dp"
+                />
+
+            <TextView
+                android:id="@+id/chart_day_sit_etc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="2시간 25분"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="43dp"
+                android:layout_marginBottom="3dp"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:elevation="13dp"
+            android:background="@color/gray4"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="9dp"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="@string/left"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:id="@+id/chart_day_date"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:text="05월 12일"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="@string/right"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="11dp"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/chart_btn_day"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="@string/daily"
+                android:background="@drawable/border_btn_left_round_pressed"
+                />
+            <Button
+                android:id="@+id/chart_btn_week"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="@string/weekly"
+                android:background="@drawable/select_btn_center"
+                />
+            <Button
+                android:id="@+id/chart_btn_month"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="@string/monthly"
+                android:background="@drawable/select_btn_right"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.175"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/border_main_layout"
+        android:elevation="20dp"
+        android:orientation="vertical"
+        android:baselineAligned="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/comment"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/comment2"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/colorPrimary"
+        >
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:elevation="8dp"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/border_main_layout"
+        android:layout_weight="1"
+
+        >
+        <ImageView
+            android:layout_width="171dp"
+            android:layout_height="171dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sit"/>
+        <com.example.jinsu.cash.activity.DrawView
+            android:id="@+id/main_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:elevation="8dp"
+        android:background="@drawable/border_main_layout"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.509">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="14dp"
+            >
+            <TextView
+
+                android:id="@+id/main_txt_total_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textColor="@color/black"
+                android:text="09"/>
+
+            <TextView
+                android:layout_toRightOf="@id/main_txt_total_hour"
+                android:layout_alignBaseline="@id/main_txt_total_hour"
+                android:id="@+id/main_txt_total_hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:text="시간"/>
+
+
+            <TextView
+                android:id="@+id/main_txt_total_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textColor="@color/black"
+                android:text="30"
+                android:layout_toLeftOf="@id/main_txt_total_min2"
+                android:layout_alignBaseline="@id/main_txt_total_min2"
+                />
+
+            <TextView
+                android:id="@+id/main_txt_total_min2"
+                android:layout_below="@id/main_txt_total_hour2"
+                android:layout_alignRight="@id/main_txt_total_hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:text="분"/>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:text="@string/total_time"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="14dp"
+            >
+            <TextView
+                android:id="@+id/main_txt_good_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textColor="@color/colorPrimary"
+                android:text="06"/>
+
+            <TextView
+                android:layout_toRightOf="@id/main_txt_good_hour"
+                android:layout_alignBaseline="@id/main_txt_good_hour"
+                android:id="@+id/main_txt_good_hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="8dp"
+                android:text="시간"/>
+
+
+            <TextView
+                android:id="@+id/main_txt_good_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textColor="@color/colorPrimary"
+                android:text="30"
+                android:layout_toLeftOf="@id/main_txt_good_min2"
+                android:layout_alignBaseline="@id/main_txt_good_min2"
+                />
+
+            <TextView
+                android:id="@+id/main_txt_good_min2"
+                android:layout_below="@id/main_txt_good_hour2"
+                android:layout_alignRight="@id/main_txt_good_hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/colorPrimary"
+                android:text="분"/>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:text="@string/good_time"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="14dp"
+            >
+            <TextView
+                android:id="@+id/main_txt_bad_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textColor="@color/red"
+                android:text="03"/>
+
+            <TextView
+                android:layout_toRightOf="@id/main_txt_bad_hour"
+                android:layout_alignBaseline="@id/main_txt_bad_hour"
+                android:id="@+id/main_txt_bad_hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/red"
+                android:layout_marginBottom="8dp"
+                android:text="시간"/>
+
+
+            <TextView
+                android:id="@+id/main_txt_bad_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textColor="@color/red"
+                android:text="00"
+                android:layout_toLeftOf="@id/main_txt_bad_min2"
+                android:layout_alignBaseline="@id/main_txt_bad_min2"
+                />
+
+            <TextView
+                android:id="@+id/main_txt_bad_min2"
+                android:layout_below="@id/main_txt_bad_hour2"
+                android:layout_alignRight="@id/main_txt_bad_hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/red"
+                android:text="분"/>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:text="@string/bad_time"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:elevation="8dp"
+        android:background="@drawable/border_main_layout"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.265"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/main_im_cash"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:src="@drawable/ic_cash"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/main_txt_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36dp"
+            android:textColor="@color/yellow2"
+            android:text="300"
+            android:layout_marginBottom="5dp"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

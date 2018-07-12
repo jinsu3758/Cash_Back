@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/sign_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="16dp"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/sign_im_profile"
+                android:layout_width="68dp"
+                android:layout_height="71dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/sign_profile" />
+
+            <!--<Button
+                android:id="@+id/sign_btn_profile"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="right|bottom"
+                android:background="@drawable/camera"
+                android:textSize="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"/>-->
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="9dp">
+                <RelativeLayout
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:paddingLeft="16dp"
+                        android:id="@+id/sign_edit_nickname"
+                        android:layout_width="164dp"
+                        android:layout_height="40dp"
+                        android:hint="@string/nickname"
+                        android:textSize="12sp"
+                        android:background="@drawable/border_edit_sign"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/mint1"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/sign_btn_overlapNick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/overlap_check"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border_btn_sign"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:paddingLeft="16dp"
+                        android:id="@+id/sign_edit_id"
+                        android:layout_width="164dp"
+                        android:layout_height="40dp"
+                        android:hint="@string/id"
+                        android:textSize="12sp"
+                        android:background="@drawable/border_edit_sign"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/mint1"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/sign_btn_overlapId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/overlap_check"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border_btn_sign"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="327dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:paddingLeft="16dp"
+            android:id="@+id/sign_edit_pw"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/pw2"
+            android:textSize="12sp"
+            android:inputType="textPassword"
+            android:background="@drawable/border_edit_sign"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mint1"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="327dp"
+        android:layout_height="17dp"
+        android:layout_gravity="center"
+        >
+        <CheckBox
+            android:id="@+id/sign_ch_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_gravity="bottom"
+            />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/pw_look"
+            android:textColor="@color/black"
+            />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="327dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp">
+
+        <ProgressBar
+            android:id="@+id/sign_prg"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+        <EditText
+            android:paddingLeft="16dp"
+            android:id="@+id/sign_edit_pw_check"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="12sp"
+            android:hint="@string/pw_check"
+            android:inputType="textPassword"
+            android:background="@drawable/border_edit_sign"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mint1"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sign_btn_default"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        android:layout_width="327dp"
+        android:layout_height="45dp"
+        android:text="@string/default_set"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:background="@drawable/border_btn_login"/>
+
+    <TextView
+        android:id="@+id/sign_txt_agree"
+        android:layout_marginTop="12dp"
+        android:layout_width="327dp"
+        android:layout_height="209dp"
+        android:layout_gravity="center"
+        android:background="@drawable/border_edit_sign2"
+        android:textSize="10sp"
+        android:singleLine="false"
+        android:text="@string/user_term"
+        android:scrollbars="vertical"
+        />
+
+    <LinearLayout
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingRight="6dp"
+        android:gravity="right"
+        android:baselineAligned="true"
+        >
+        <RadioGroup
+            android:id="@+id/sign_rg_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/sign_rd_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        </RadioGroup>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/agree"
+            />
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/sign_btn_complete"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:layout_gravity="center"
+        android:text="@string/complete"
+        android:layout_marginBottom="27dp"
+        android:background="@drawable/border_btn_sign"/>
+
+</LinearLayout>
+
