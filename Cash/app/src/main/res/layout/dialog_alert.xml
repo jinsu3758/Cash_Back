@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="317dp"
+    android:layout_height="256dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:background="@drawable/popup">
+
+        <TextView
+            android:id="@+id/dialog_txt_pos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="47.2dp"
+            android:text="굽은 자세 입니다."
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_below="@id/dialog_txt_pos"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/logo" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/dialog_btn_rec"
+        android:layout_width="213dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:background="@drawable/border_btn_sign"
+        android:text="@string/rec_stretch"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+</LinearLayout>
